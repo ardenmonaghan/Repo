@@ -130,6 +130,7 @@ Address any requested changes.
 #### 1.6 Merge Conflicts.
 - Merge conflicts will open happen when you try to merge two branches using a PR.
 - You will need to resolve the conflicts manually. by deciding which code to keep.
+- Go to PR on github > and then click on the two branches you want to compare > Build pull request
 
 #### 1.7 Deleting branches 
 - You can delete a branch on github first, this will delete it in the remote repository
@@ -139,3 +140,19 @@ git branch -D [branch-name]
 ```
 - This will delete it locally on your computer. 
 
+#### 1.8 Common Branch Mistake
+- When you work on a feature branch you push your changes to your repo, but you dont have all the changes locally first
+```
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+- This is because you dont have the latest changes from the remote repository.
+
+- To solve this issue 
+```
+git pull --rebase origin [branch-name]
+```
