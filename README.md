@@ -156,26 +156,6 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 git pull --rebase origin [branch-name]
 ```
-
-- If conflicts occur
-```
-git add <files>
-git rebase --continue
-```
 - It might bring you to vim editor, you can exit by typing :wq
+
 - Then you can push your changes to the remote repository.
-```
-git push origin [branch-name]
-```
-
-#### 1.9 Common Mistake, Editing Code, wanting to revert changes. 
-- Sometimes you might edit the code, and then you want to revert changes.
-- You can go to the git side bar on VSCode and then click on the changes you want to revert. (discard changes)
-
-#### 1.10 Common Mistake, Wanting to return to previous commit.
-- Sometimes you might want to return to a previous commit.
-
-```
-git revert <hash>
-```
-- Each commit has a unique hash. What this command does is it creates a new commit which contains everything from the previous commit that you wanted to revert to. 
