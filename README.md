@@ -159,3 +159,44 @@ git pull --rebase origin [branch-name]
 - It might bring you to vim editor, you can exit by typing :wq
 
 - Then you can push your changes to the remote repository.
+
+- Then you can push your changes to the remote repository.
+```
+git push origin [branch-name]
+```
+
+#### 1.9 Common Mistake, Editing Code, wanting to revert changes. 
+- Sometimes you might edit the code, and then you want to revert changes.
+- You can go to the git side bar on VSCode and then click on the changes you want to revert. (discard changes)
+
+#### 1.10 Common Mistake, Wanting to return to previous commit.
+- Sometimes you might want to remove changes from a previous commit.
+- For example: A -- B -- C (HEAD)
+```
+A: initial commit (hello world)
+
+B: add a README
+
+C: add a typo to README
+```
+- What git revert C would do is that it creates a new commit D which undoes all the changes from C. 
+- Your history still shows C happened, but D cancels its effect.
+
+```
+git revert <hash> (this will be the hash for your previous commit)
+```
+- Each commit has a unique hash. What this command does is it creates a new commit which contains everything from the previous commit that you wanted to revert to. 
+
+- You may have conflicts, you can resolve them by deciding what to keep.
+
+```
+git add .
+git revert --continue
+```
+
+- This may bring you to the vim editor for commiting, you can save and exit by typing :wq
+
+- Then you can push your changes to the remote repository.
+```
+git push origin [branch-name]
+```
