@@ -156,3 +156,5 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 git pull --rebase origin [branch-name]
 ```
+- It might bring you to vim editor, you can exit by typing :wq
+- Then you can push your changes to the remote repository.
