@@ -63,6 +63,24 @@ git checkout -b feature/[feature-name]
 git push origin feature/[feature-name]
 ```
 
+#### Switching between branches
+
+```
+git checkout [branch-name]
+```
+
+#### Checking what branches you have locally
+
+```
+git branch
+```
+
+#### Checking what branches you have remotely
+
+```
+git branch -r
+```
+
 - Note: We push to origin, as when you create your repo main is configured to origin, thats why you can do git push
 - But the new branch you created isn't automatically known to be configed to origin, so you need to explicitly state that you want to bring your remote branch code to origin.
 
