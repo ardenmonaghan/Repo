@@ -113,3 +113,11 @@ Address any requested changes.
 - Merge conflicts will open happen when you try to merge two branches using a PR.
 - You will need to resolve the conflicts manually. by deciding which code to keep.
 
+#### 1.7 Deleting branches 
+- You can delete a branch on github first, this will delete it in the remote repository
+- After that you can perform 
+```
+git branch -D [branch-name] 
+```
+- This will delete it locally on your computer. 
+
