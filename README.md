@@ -16,13 +16,13 @@ git push
 ```
 - then you see all your code reflected in github. 
 
-### 1.0 General Commands
+### 1.0 General Commands (Software Development Workflow)
 
 ```
 Cloning Repo: git clone <repo-url>
 ```
 
-#### Make sure you are up to date with the develop branch.
+#### Make sure you are up to date with the develop branch. 
 
 ```
 git checkout develop
@@ -172,3 +172,10 @@ git push origin [branch-name]
 - Sometimes you might edit the code, and then you want to revert changes.
 - You can go to the git side bar on VSCode and then click on the changes you want to revert. (discard changes)
 
+#### 1.10 Common Mistake, Wanting to return to previous commit.
+- Sometimes you might want to return to a previous commit.
+
+```
+git revert <hash>
+```
+- Each commit has a unique hash. What this command does is it creates a new commit which contains everything from the previous commit that you wanted to revert to. 
