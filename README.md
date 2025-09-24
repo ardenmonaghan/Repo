@@ -1,7 +1,20 @@
 # Git Conventions
 
+### 0.0 General Information
+
 - Its good to think about git as a tool for version control.
 - Github is a platform that allows for code to be uploaded to something similar to the cloud and then able to be brought to your local machine where you manage it and then you can upload changes back to the cloud.
+
+#### What is our main flow?
+
+- Currently you've likely been using
+
+```
+git add .
+git commit -m "message"
+git push
+```
+- then you see all your code reflected in github. 
 
 ### 1.0 General Commands
 
@@ -33,9 +46,10 @@ git pull origin develop - this updates the changes from develop into your featur
 ### 1.1 Feature Branches
 
 #### What are feature branches?
-- Git branches start from origin. this includes main, which is a starting branch. 
+- Git branches start from origin. this includes main, which is a starting branch.
 - When you say something like git push origin main it means bring all my remote code from the main branch to the main remote branch.
-- Demonstration below on how to create a feature branch locally and then push it to our remote repository. 
+
+#### Demonstration below on how to create a feature branch locally and then push it to our remote repository. 
 
 - **Feature branches:** `feature/[feature-name]`
 - Please pull and push so we don't have duplicates.
@@ -48,6 +62,9 @@ git checkout -b feature/[feature-name]
 ```
 git push origin feature/[feature-name]
 ```
+
+- Note: We push to origin, as when you create your repo main is configured to origin, thats why you can do git push
+- But the new branch you created isn't automatically known to be configed to origin, so you need to explicitly state that you want to bring your remote branch code to origin.
 
 ### 1.2 Commit Message Guidelines.
 
